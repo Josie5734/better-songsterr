@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+
+  "name": "popup remover",
+  "version": "1.0",
+
+  "description": "Automatically close Songsterr popup when playing along to youtube videos.",
+
+  "icons": {
+    "48": "icons/48x48.png",
+    "96": "icons/96x96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.songsterr.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
