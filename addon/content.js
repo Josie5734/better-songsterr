@@ -1,12 +1,26 @@
 console.log("Better-Songsterr addon loaded");
 
 //close the youtube blocker popup
-function closeYTBlockerPopup() {
+async function closeYTBlockerPopup() {
+  const settings = await browser.storage.local.get("YTBlocker"); //get settings state
+
+  //exit if set to false
+  if (settings.YTBlocker === false) {
+    return;
+  }
+
   document.querySelector("._2e9mvq_popup.w_eHuW_popupRedesign .w_eHuW_continueLink a")?.click(); //check for popup div, click continue button if it exists
 }
 
 //delete the banner add
-function closeBannerAd() {
+async function closeBannerAd() {
+  const settings = await browser.storage.local.get("bannerBlocker");
+
+  //exit if set to false
+  if (settings.bannerBlocker === false) {
+    return;
+  }
+
   document.getElementById("showroom").remove(); //target banner add section and just delete 
 } //avoids the popup that tries to offer the subscription
 

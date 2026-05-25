@@ -11,6 +11,11 @@
     "96": "icons/96x96.png"
   },
 
+  "action": {
+    "default_title": "Better Songsterr",
+    "default_popup": "popup.html"
+  },
+
   "content_scripts": [
     {
       "matches": ["*://*.songsterr.com/*"],
@@ -18,7 +23,7 @@
     }
   ],
 
- "browser_specific_settings": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "songsterr-popup-killer@example.com",
 
@@ -26,5 +31,7 @@
         "required": ["none"]
       }
     }
-  }
+  },
+
+  "permissions": ["storage"]
 }
