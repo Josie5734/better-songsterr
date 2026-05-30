@@ -9,7 +9,10 @@ async function closeYTBlockerPopup() {
     return;
   }
 
-  document.querySelector("._2e9mvq_popup.w_eHuW_popupRedesign .w_eHuW_continueLink a")?.click(); //check for popup div, click continue button if it exists
+  setTimeout(() => {
+
+    document.querySelector("._2e9mvq_popup.w_eHuW_popupRedesign .w_eHuW_continueLink a")?.click(); //check for popup div, click continue button if it exists
+  }, 200);
 }
 
 //delete the banner add
@@ -21,7 +24,11 @@ async function closeBannerAd() {
     return;
   }
 
-  document.getElementById("showroom").remove(); //target banner add section and just delete 
+
+  const banner = document.getElementById("showroom"); //get the entire banner ad section
+  if (banner) { //if got it
+    banner.style.display = "none";
+  }
 } //avoids the popup that tries to offer the subscription
 
 //run all functions

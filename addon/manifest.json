@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
 
-  "name": "popup remover",
-  "version": "1.0",
+  "name": "Better Songsterr",
+  "version": "1.1",
 
-  "description": "Automatically close Songsterr popup when playing along to youtube videos.",
+  "description": "Small improvements to the user experience of Songsterr.",
 
   "icons": {
     "48": "icons/48x48.png",
@@ -25,7 +25,7 @@
 
   "browser_specific_settings": {
     "gecko": {
-      "id": "songsterr-popup-killer@example.com",
+      "id": "BetterSongsterr@github.com/Josie5734",
 
       "data_collection_permissions": {
         "required": ["none"]
